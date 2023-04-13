@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>staff</title>
+    <link rel="stylesheet" href="stucss.css" />
+  </head>
+  <body>
+    <header>
+      <img src="image/Group 61.png" />
+      <nav>
+        <ul>
+          <li>
+            <a href="student.html"
+              ><img src="image/Group 62.png" alt="student"
+            /></a>
+          </li>
+          <li>
+            <a href="st.html"
+              ><img src="image/Group 63.png" alt="staff" style="height: 54px"
+            /></a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <div class="bck"></div>
+    <div class="grid">
+      <a href="profile.html"
+        ><img src="image/f/Dumbledore.png" alt="Dumbledore"
+      /></a>
+      <a href="profile.html"><img src="image/f/Hagrid.png" alt="Hagrid" /></a>
+      <a href="profile.html"><img src="image/f/Lupin.png" alt="Lupin" /></a>
+      <a href="profile.html"
+        ><img src="image/f/Mcgonagall.png" alt="Mcgonagall"
+      /></a>
+      <a href="profile.html"
+        ><img src="image/f/umbridge.png" alt="umbridge"
+      /></a>
+      <a href="profile.html"><img src="image/f/snape.png" alt="snape" /></a>
+    </div>
+    <script>
+      fetch("https://hp-api.onrender.com/api/characters/students")
+        .then((res) => res.json)
+        .then((data) => console.log(data));
+    </script>
+  </body>
+</html>

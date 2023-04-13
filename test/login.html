@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>login</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="header">
+      <img src="image/Group 72.png" />
+      <h1>Log In</h1>
+      <form class="f" id="form">
+        <input type="text" id="mail" name="mail" placeholder="User Id" /><br />
+        <input
+          type="password"
+          id="pass"
+          name="pass"
+          placeholder="Your password"
+        /><br /><br />
+        <input type="button" value="login" id="button" onclick="load()" />
+      </form>
+
+      <script>
+        /* connection with enter not working
+        var logg=document.getElementById("button")
+        logg.addEventListener("keypress", function(event) {
+          console.log(event)
+          if (event.key === "Enter") {
+            event.preventDefault();
+    document.getElementById("button").click();
+          }
+});*/
+
+
+/*   have to see later
+               1.api
+               2.enter
+               3. login back solve
+  */
+            function load() {
+          var u = document.getElementById("mail").value;
+          var p = document.getElementById("pass").value;
+          console.log(u + "****" +p);
+          var val=[{"l":{
+                  "pass":"Vignesh123@",
+                  "user":"Vignesh"
+                }}]
+        var pass = val[0].l.pass;
+        var user = val[0].l.user;
+        if(u===user && p===pass)
+              {
+                console.log("---------")
+                alert("LogIn success");
+                window.open("st.html","_self")
+                return
+              }
+              else{
+                alert("Invalid username or password");
+          }
+        console.log(pass+"---"+user)
+           /*     api calls
+           fetch("https://randomuser.me/api/?results=5")
+          .then((response) => response.json())
+          .then((data) => {
+            data.results.forEach((user) => {
+              var username = user.login.username;
+              var password = user.login.password;
+              if(u==user && p==pass)
+              {
+                console.log("***********************************")
+                alert("LogIn success");
+                return
+              }
+            });
+          });*/
+        }
+      </script>
+    </div>
+  </body>
+</html>
